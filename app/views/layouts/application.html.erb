@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RecipeApp</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>RecipeApp  | <%= yield :title %> </title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+  <%= yield :head %>
 </head>
 <body>
-
-<%= yield %>
+  <div id="main_container">
+  <!--  header  -->
+  <div class="header">
+    <div class="logo"><h1>Recipe App</h1></div>
+    <div class="right_header">
+      <p> Welcome !</p>
+    </div>
+  </div>
+  <!-- main content -->
+  <div class="main_content">
+    <div class="menuwrap cf">
+      <div class = "menu">
+        <%= render :partial => "/layouts/menu" %>
+      </div>
+    </div>
+    <div class = "center_content cf">
+      <p> <%= flash[:notice] %> </p>
+      <%= yield %>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- footer  -->
+<div class="footer">
+  <div class="wrap">
+    <%= render :partial => "/layouts/footer" %>
+  </div>
+</div>
 
 </body>
 </html>
