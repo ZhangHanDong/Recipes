@@ -1,0 +1,14 @@
+<fieldset>
+  <dl>
+      <dt><label for="ingredient_id">Ingredient id</label></dt>
+      <dd><%= text_field :recipe_ingredient, :ingredient_id, :vlaue => "#{params[:id]}", :size => 20 %></dd>
+  </dl>
+  <dl>
+      <dt><label for="amount">amount</label></dt>
+      <dd><%= text_field :recipe_ingredient, :amount, :size => 20 %></dd>
+  </dl>
+  <dl>
+      <dt><label for="unit">unit</label></dt>
+      <dd><%= text_field :recipe_ingredient, :unit, :size => 20 %></dd>
+  </dl>
+</fieldset>

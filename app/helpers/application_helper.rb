@@ -14,7 +14,7 @@ module ApplicationHelper
   end
   
   def ingredients_collect
-    @met = Category.all.select {|c| c if c.type.to_s == 'IngredientCate'}.collect{|c| [c.name.to_s, [ [c.ingredients.map(&:name), c.id] ] ]}
+    @met = Category.all.select {|c| c if c.type.to_s == 'IngredientCate'}.collect{|c| [c.name.to_s, [ [c.ingredients.map(&:name), c.ingredients.map(&:id)] ] ]}
     g = {}
     @met.each do |m|
       if g[m[0]].nil?

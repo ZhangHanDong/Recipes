@@ -17,7 +17,7 @@
   <dl>
       <dt><label for="ingredients">Ingredients</label></dt>
       <dd>
-      <%= select_tag 'recipe[ingredients][]', grouped_options_for_select(ingredients_collect), {:multiple => true, :style => "height:100px;width:150px;"} %>
+      <%= select_tag 'recipe[ingredients][]', grouped_options_for_select(ingredients_collect), {:multiple => true, :style => "height:100px;width:150px;", :id => "recipe_ingredients"} %>
        </dd>
   </dl>
   

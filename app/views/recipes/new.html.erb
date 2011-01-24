@@ -3,6 +3,8 @@
   <%= simple_form_for @recipe, :as => :recipe, :url => recipes_path, :class => "niceform" do |f| %>
     <%= render :partial => "form", :locals => { :f => f } %>
     <hr/>
+    
+    <div id="addressCities" />
     <dl class="submit">
         <%= f.submit "submit", :input_html => { :class => "NFButton" }, :label => false %>
     </dl>
