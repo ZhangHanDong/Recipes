@@ -1,0 +1,12 @@
+<fieldset>
+  <dl>
+      <dt><label for="name">Name</label></dt>
+      <dd><%= f.input :name, :required => true, :input_html => { :size => 50 }, :label=>false %></dd>
+  </dl>
+
+  <dl>
+      <dt><label for="desc">Description</label></dt>
+      <dd><%= f.input :desc, :as => :text, :input_html => { :rows => 5, :cols => 42 }, :label=>false  %></dd>
+  </dl>
+  
+</fieldset>

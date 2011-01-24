@@ -1,0 +1,10 @@
+<h2>New Ingredient</h2>
+<div class="form">
+  <%= simple_form_for @ingredient, :as => :ingredient, :url => ingredients_path, :class => "niceform" do |f| %>
+    <%= render :partial => "form", :locals => { :f => f } %>
+    <hr/>
+    <dl class="submit">
+        <%= f.submit "submit", :input_html => { :class => "NFButton" }, :label => false %>
+    </dl>
+  <% end %>
+</div>

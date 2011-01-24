@@ -1,0 +1,10 @@
+<h2>New <%= @cate_name %> Category</h2>
+<div class="form">
+  <%= simple_form_for @category, :as => @cate_class, :url => categories_path, :class => "niceform" do |f| %>
+    <%= render :partial => "form", :locals => { :f => f } %>
+    <hr/>
+    <dl class="submit">
+        <%= f.submit "submit", :input_html => { :class => "NFButton" }, :label => false %>
+    </dl>
+  <% end %>
+</div>

@@ -1,0 +1,30 @@
+<h2>recipes list</h2>
+<br/>
+<div>
+  <a class="bt_green" href="<%= new_recipe_path %>"><span class="bt_green_lft"></span>
+    <strong>New Recipe</strong>
+  <span class="bt_green_r"></span></a>
+</div>
+
+<div style="float:left;">
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+  <thead>
+    <tr>
+
+       <th scope="col" class="rounded"> Name  </th>
+       <th scope="col" class="rounded"> Description </th>
+       <th scope="col" class="rounded"> Type  </th>
+       <th scope="col" class="rounded"> CreateTime  </th>
+       <th scope="col" class="rounded"> Operates   </th>
+     </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => "item", :collection => @recipes %>
+  </tbody>
+  <tfoot>
+    <td colspan="6">There are <%=@recipes.total_entries%> recipes.
+      <%= will_paginate @recipes %>
+    </td>
+  </tfoot>
+</table>
+</div>

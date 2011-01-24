@@ -1,0 +1,30 @@
+<h2>Ingredients List</h2>
+<br/>
+<div>
+  <a class="bt_green" href="<%= new_ingredient_path %>"><span class="bt_green_lft"></span>
+    <strong>New Ingredient</strong>
+  <span class="bt_green_r"></span></a>
+</div>
+
+<div style="float:left;">
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+  <thead>
+    <tr>
+
+       <th scope="col" class="rounded"> Name  </th>
+       <th scope="col" class="rounded"> Description </th>
+       <th scope="col" class="rounded"> Type  </th>
+       <th scope="col" class="rounded"> CreateTime  </th>
+       <th scope="col" class="rounded"> Operates   </th>
+     </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => "item", :collection => @ingredients %>
+  </tbody>
+  <tfoot>
+    <td colspan="6">There are <%=@ingredients.total_entries%> ingredients.
+      <%= will_paginate @ingredients %>
+    </td>
+  </tfoot>
+</table>
+</div>

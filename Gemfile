@@ -6,3 +6,4 @@ gem 'haml', '~> 3.0.18'
 gem "will_paginate", "3.0.pre2"
 gem 'inherited_resources', '1.1.2'
 gem "simple_form"
+gem 'jquery-rails', '>= 0.2.6'

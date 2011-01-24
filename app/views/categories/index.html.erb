@@ -1,1 +1,36 @@
 
+<h2>Category List</h2>
+<br/>
+<div>
+  <a class="bt_green" href="<%= new_category_path(:typee => "recipe") %>"><span class="bt_green_lft"></span>
+    <strong>New Recipe Category</strong>
+  <span class="bt_green_r"></span></a>
+  
+  <a class="bt_green" href="<%= new_category_path(:typee => "ingredient") %>"><span class="bt_green_lft"></span>
+    <strong>New Ingredient Category</strong>
+  <span class="bt_green_r"></span></a>
+</div>
+
+
+<div style="float:left;">
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+  <thead>
+    <tr>
+
+       <th scope="col" class="rounded"> Name  </th>
+       <th scope="col" class="rounded"> Description </th>
+       <th scope="col" class="rounded"> Type  </th>
+       <th scope="col" class="rounded"> CreateTime  </th>
+       <th scope="col" class="rounded"> Operates   </th>
+     </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => "item", :collection => @categories %>
+  </tbody>
+  <tfoot>
+    <td colspan="6">There are <%=@categories.total_entries%> categories.
+      <%= will_paginate @categories %>
+    </td>
+  </tfoot>
+</table>
+</div>
