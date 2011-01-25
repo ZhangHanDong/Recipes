@@ -1,7 +1,7 @@
 <fieldset>
   <dl>
       <dt><label for="category_id">Type</label></dt>
-      <dd><%= f.input :category_id, :collection => recipe_cate_collect,  :required => true, :input_html => { :size => 2, :multiple => "multiple" }, :label=>false %></dd>
+      <dd><%= f.input :category_id, :collection => recipe_cate_collect,  :required => true, :input_html => { :size => 5 }, :label=>false %></dd>
   </dl>
   
   <dl>
@@ -14,10 +14,10 @@
       <dd><%= f.input :desc, :as => :text, :input_html => { :rows => 5, :cols => 42 }, :label=>false  %></dd>
   </dl>
   
-  <dl>
+  <dl id="recipe_ingredients_dl">
       <dt><label for="ingredients">Ingredients</label></dt>
       <dd>
-      <%= select_tag 'recipe[ingredients][]', grouped_options_for_select(ingredients_collect), {:multiple => true, :style => "height:100px;width:150px;", :id => "recipe_ingredients"} %>
+      <%= select_tag 'ingredients', grouped_options_for_select(ingredients_collect), {:multiple => true, :style => "height:100px;width:150px;", :id => "recipe_ingredients"} %>
        </dd>
   </dl>
   
