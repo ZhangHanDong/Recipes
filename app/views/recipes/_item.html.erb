@@ -1,0 +1,6 @@
+<tr>
+  <td><%= link_to item.name, recipe_path(item) %></td>
+  <td><%= item.desc %></td>
+  <td><%= item.category.try(:name) %></td>
+  <td><%= item.created_at.to_s(:db) %></td>
+</tr>
