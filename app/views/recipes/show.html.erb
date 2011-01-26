@@ -27,8 +27,8 @@
       <hr />
       <p>Required Ingredients：</p>
       <dl>
-        <% @recipe_ingredients.each do |ri| %>
-        <dt><label>Type:</label></dt>
+        <% @recipe_ingredients.each_with_index do |ri,index| %>
+        <dt><%= index + 1%>.</dt>
         <dd>
           Type :<%= ri.ingredient_typee %> / Name:  <%= ri.ingredient_name %> / Require Amount: <%= ri.amount %> - <%= ri.unit %>
         </dd>
