@@ -15,7 +15,6 @@ module ApplicationHelper
   
   def ingredients_collect
     @met = Category.all.select {|c| c if c.class.to_s == 'IngredientCate'}.collect{|c| [c.name.to_s,  c.ingredients.select{|r| r if !r.deleted?}.collect{|c| [c.name.to_s, c.id]} ]}
-    
     g = {}
     @met.each do |m|
       if g[m[0]].nil?
